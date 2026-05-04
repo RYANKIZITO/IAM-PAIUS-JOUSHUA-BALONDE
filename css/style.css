@@ -1087,16 +1087,12 @@ body {
     }
 }
 
-
-
-
 /* Paius slider dot removal */
 .details .slick-dots,
 .tm-img-container .slick-dots,
 .video-container .slick-dots {
     display: none !important;
 }
-
 
 /* Paius gallery card tight sizing */
 .tm-gallery-wrapper {
@@ -1511,5 +1507,162 @@ body {
     .tm-video-wrapper,
     .tm-testimonial-wrapper {
         width: 84vw;
+    }
+}
+
+/* --- Paius Premium Social Icons Final Update --- */
+
+.tm-social-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.tm-site-header .tm-social-links {
+    justify-content: flex-end;
+}
+
+.details__description .tm-social-links,
+.product__description .tm-social-links {
+    justify-content: flex-start;
+}
+
+.tm-social-link {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 1.25rem;
+    line-height: 1;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        opacity 0.25s ease,
+        filter 0.25s ease;
+}
+
+.tm-social-link i,
+.tm-social-link svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+    line-height: 1;
+    text-align: center;
+    color: #ffffff;
+    fill: currentColor;
+    position: relative;
+    z-index: 2;
+}
+
+.tm-social-link i {
+    font-size: 1.28rem;
+}
+
+.tm-social-link:hover,
+.tm-social-link:focus {
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-4px);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.36);
+    opacity: 0.97;
+    filter: saturate(1.08);
+    outline: none;
+}
+
+.tm-social-link:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.85);
+    outline-offset: 4px;
+}
+
+.tm-social-whatsapp {
+    background: #25D366;
+}
+
+.tm-social-email {
+    background: #EA4335;
+}
+
+.tm-social-facebook {
+    background: #1877F2;
+}
+
+.tm-social-tiktok {
+    background: #111111;
+}
+
+.tm-social-instagram {
+    background: radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285AEB 90%
+    );
+}
+
+/* Keeps icons aligned with the left-facing layout on tablets and phones */
+@media (max-width: 767px) {
+    .tm-site-header .tm-social-links,
+    .details__description .tm-social-links,
+    .product__description .tm-social-links {
+        justify-content: flex-start;
+    }
+
+    .tm-social-links {
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .tm-social-link {
+        width: 46px;
+        height: 46px;
+        min-width: 46px;
+        min-height: 46px;
+    }
+
+    .tm-social-link i,
+    .tm-social-link svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    .tm-social-link i {
+        font-size: 1.2rem;
+    }
+}
+
+/* Slightly tighter spacing for very small screens */
+@media (max-width: 430px) {
+    .tm-social-links {
+        gap: 10px;
+    }
+
+    .tm-social-link {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .tm-social-link i,
+    .tm-social-link svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .tm-social-link i {
+        font-size: 1.12rem;
     }
 }
